@@ -1,0 +1,14 @@
+{
+  "name": "food-ordering-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd food-ordering-backend && npm run dev",
+    "dev:frontend": "cd food-ordering-frontend && npm run dev",
+    "install:all": "cd food-ordering-backend && npm install && cd ../food-ordering-frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
